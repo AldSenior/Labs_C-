@@ -5,7 +5,7 @@ using namespace std;
 int getRandomNumber() {
   static random_device rd;  // Инициализация генератора случайных чисел
   static mt19937 gen(rd()); // Генератор Mersenne Twister
-  uniform_int_distribution<> distrib(-10, 10);
+  uniform_int_distribution<> distrib(-50, 50);
   return distrib(gen);
 }
 void remove_mass_element(int *array, int &n, int index) {
@@ -16,7 +16,7 @@ void remove_mass_element(int *array, int &n, int index) {
     array[i] = array[i + 1];
   }
 }
-int findMin(int *mass, int size) {
+void findMin(int *mass, int size) {
   int min_value = mass[0];
   for (int i = 1; i < size; i++) {
     if (mass[i] < min_value) {
@@ -66,51 +66,51 @@ void inAscendingOrder(int **matrix, int rows, int cols) {
 }
 
 int main() {
-  // int size;
+  int size;
 
-  // cout << "Введите длину массива: ";
+  cout << "Введите длину массива: ";
 
-  // cin >> size;
-  // int *mass = new int[size];
+  cin >> size;
+  int *mass = new int[size];
 
-  // cout << "Исходный массив: " << "\n";
-  // for (int i = 0; i < size; i++) {
-  //   mass[i] = getRandomNumber();
-  //   cout << mass[i] << " ";
+  cout << "Исходный массив: " << "\n";
+  for (int i = 0; i < size; i++) {
+    mass[i] = getRandomNumber();
+    cout << mass[i] << " ";
+  }
+
+  findMin(mass, size);
+
+  delete[] mass;
+
+  // //
+  // int size_column_matrix;
+  // int size_row_matrix;
+
+  // cout << "Введите количество строк двумерного массива:";
+  // cin >> size_row_matrix;
+  // cout << "Введите количество колонок двумерного массива:";
+  // cin >> size_column_matrix;
+
+  // int **matrix = new int *[size_row_matrix];
+  // for (int i = 0; i < size_row_matrix; ++i) {
+  //   matrix[i] = new int[size_column_matrix];
+  // }
+  // cout << "Сгенерированная матрица: \n";
+  // for (int i = 0; i < size_row_matrix; i++) {
+  //   for (int j = 0; j < size_column_matrix; j++) {
+  //     matrix[i][j] = getRandomNumber();
+  //     // cout << matrix[i][j] << " ";
+  //   }
   // }
 
-  // findMin(mass, size);
+  // inAscendingOrder(matrix, size_row_matrix, size_column_matrix);
 
-  // delete[] mass;
-
-  //
-  int size_column_matrix;
-  int size_row_matrix;
-
-  cout << "Введите количество строк двумерного массива:";
-  cin >> size_row_matrix;
-  cout << "Введите количество колонок двумерного массива:";
-  cin >> size_column_matrix;
-
-  int **matrix = new int *[size_row_matrix];
-  for (int i = 0; i < size_row_matrix; ++i) {
-    matrix[i] = new int[size_column_matrix];
-  }
-  cout << "Сгенерированная матрица: \n";
-  for (int i = 0; i < size_row_matrix; i++) {
-    for (int j = 0; j < size_column_matrix; j++) {
-      matrix[i][j] = getRandomNumber();
-      // cout << matrix[i][j] << " ";
-    }
-  }
-
-  inAscendingOrder(matrix, size_row_matrix, size_column_matrix);
-
-  // Освобождение памяти
-  for (int i = 0; i < size_row_matrix; ++i) {
-    delete[] matrix[i];
-  }
-  delete[] matrix;
+  // // Освобождение памяти
+  // for (int i = 0; i < size_row_matrix; ++i) {
+  //   delete[] matrix[i];
+  // }
+  // delete[] matrix;
 
   return 0;
 }
