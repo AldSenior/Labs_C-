@@ -145,7 +145,7 @@ void task1() {
   char *substr = new char[substr_size];
   char *result = nullptr;
 
-  cout << "=== Обработка Char-строк ===" << endl;
+  cout << "=== Обработка Char-строк ===" << "\n";
   cout << "Входная строка: ";
   cin.getline(input, inp_size);
 
@@ -155,7 +155,7 @@ void task1() {
   // Фильтрация по наличию всех символов
   createFilteredString(result, input, substr);
   cout << "\nРезультат фильтрации: "
-       << (result && result[0] ? result : "<пусто>") << endl;
+       << (result && result[0] ? result : "<пусто>") << "\n";
 
   // Перемещение первого слова с подстрокой
   char *modified = new char[strlen(input) + 1];
@@ -163,9 +163,9 @@ void task1() {
   moveFirstSubstringWord(modified, substr);
 
   if (strcmp(modified, input) != 0) {
-    cout << "После перемещения: " << modified << endl;
+    cout << "После перемещения: " << modified << "\n";
   } else {
-    cout << "Подходящие слова не найдены" << endl;
+    cout << "Подходящие слова не найдены" << "\n";
   }
 
   // Освобождение памяти
@@ -227,7 +227,7 @@ string *splitString(const char *str, size_t *wordCount) {
   return words;
 }
 void task2() {
-  cout << "\n=== Разбиение строки ===" << endl;
+  cout << "\n=== Разбиение строки ===" << "\n";
 
   string input;
   cout << "Введите строку: ";
@@ -237,14 +237,14 @@ void task2() {
   string *words = splitString(input.c_str(), &wordCount);
 
   if (words) {
-    cout << "Полученные слова (" << wordCount << "):" << endl;
+    cout << "Полученные слова (" << wordCount << "):" << "\n";
     for (size_t i = 0; i < wordCount; i++) {
-      cout << "[" << i + 1 << "] " << words[i] << endl;
+      cout << "[" << i + 1 << "] " << words[i] << "\n";
     }
 
     delete[] words;
   } else {
-    cout << "Строка пуста!" << endl;
+    cout << "Строка пуста!" << "\n";
   }
 }
 // ================== ГЛАВНОЕ МЕНЮ ==================
@@ -267,10 +267,10 @@ int main() {
       task2();
       break;
     case 0:
-      cout << "Завершение работы." << endl;
+      cout << "Завершение работы." << "\n";
       break;
     default:
-      cout << "Неверный выбор!" << endl;
+      cout << "Неверный выбор!" << "\n";
     }
   } while (choice != 0);
 
