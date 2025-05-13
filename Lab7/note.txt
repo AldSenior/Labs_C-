@@ -1,0 +1,12 @@
+MacBook 30.5cm 21.5cm 1.5cm 1.4kg 1300$
+DellXPS 31.0cm 20.0cm 1.7cm 1.8kg 1500$
+LenovoThinkPad 32.0cm 22.0cm 1.8cm 2.0kg 1399$
+LenovoThinkPad2 29.0cm 23.0cm 1.8cm 2.0kg 1399$
+HPProBook 30.5cm 21.5cm 1.5cm 1.4kg 1300$
+AsusZenBook 29.5cm 20.5cm 1.6cm 1.5kg 1450$
+AcerAspire 31.5cm 22.5cm 1.9cm 2.2kg 1350$
+MSIStealth 30.0cm 21.0cm 1.7cm 1.7kg 1500$
+SamsungGalaxyBook 29.0cm 20.0cm 1.5cm 1.3kg 1400$
+ToshibaSatellite 32.0cm 22.0cm 1.8cm 2.0kg 1399$
+SamsungGalaxyBook 29.0cm 20.0cm 1.5cm 1.3kg 1400$
+ToshibaSatellite 32.0cm 22.0cm 1.8cm 2.0kg 1399$
